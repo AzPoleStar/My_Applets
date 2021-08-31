@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+    <view class="picture-title">
+      <image src="/pages/resourse/picture/tit.png" mode="aspectFit">
+      </image>
+    </view>
+
+      <view class="page-section1">
+        <view class="page-section1-title">性别</view>
+        <radio-group name="radio">
+          <label><radio value="radio1"/>男</label>
+          <label><radio value="radio2"/>女</label>
+        </radio-group>
+      </view>
+
+      <!-- <view class="page-section2">
+        <view class="page-section2-title">占问事项</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0;" >
+              <input class="weui-input" name="input" placeholder="请输入想要占卜的事项" />
+            </view>
+          </view>
+        </view>
+      </view> -->
+
+      <view class="page-section3">
+        <view class="page-section3-title">时间起卦</view>
+        <view class="currenttime">
+          <text>{{nowyear}}年</text>
+          <text>{{nowmonth}}月</text>
+          <text>{{nowday}}日</text>
+          <text>{{nowhour}}时</text>
+          <text>{{nowminute}}分</text>
+          <text>{{nowsecond}}秒</text>
+        </view>
+        <view class="lunarDate">
+          <text>农历：{{showganzhi}}年：{{showlunarmonth}}月{{showlunarday}} {{showfrombirth}}</text>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" formType="reset">获取时间</button>
+        <button style="margin: 30rpx 0" type="primary" formType="submit">开始排盘</button>
+      </view>
+    </form>
+  </view>
+
+</view>
