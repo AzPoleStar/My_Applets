@@ -1,0 +1,1 @@
+"D:\ProfessionalSoftware\微信web开发者工具\cli.bat" cloud functions deploy --e myowncloud-2g3ie0qy1a547e9a --n quickstartFunctions --r --project "G:\Applets\Company business card" --report

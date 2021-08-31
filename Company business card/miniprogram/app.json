@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/main/main",
+    "pages/member/member",
+    "pages/works/works"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#333366",
+    "navigationBarTitleText": "极光拓影",
+    "navigationBarTextStyle":"white",
+    "backgroundColor":"#eeeeee",
+    "enablePullDownRefresh":true
+  },
+"tabBar": {
+  "color": "#eeeeee",
+  "selectedColor": "#33cc99",
+  "backgroundColor": "#333366",
+  "list": [
+    {
+      "pagePath": "pages/main/main",
+      "text":"公司简介",
+      "iconPath": "resource/picture/intro.png",
+      "selectedIconPath": "resource/picture/intro-d.png"
+    },{
+      "pagePath": "pages/member/member",
+      "text": "主要成员",
+      "iconPath": "resource/picture/member.png",
+      "selectedIconPath": "resource/picture/member-d.png"
+    },{
+      "pagePath": "pages/works/works",
+      "text": "项目案例",
+      "iconPath": "resource/picture/pro.png",
+      "selectedIconPath": "resource/picture/pro-d.png"
+    }
+  ]
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,7 @@
+<!--pages/works/works.wxml-->
+<scroll-view class="scrollview" scroll-y="true">
+  <video src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Video/demo2.1_2.mov" style="width: 750rpx; height: 1320rpx;">
+  </video>
+  <!-- <image class="role1" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_3.png" style="width: 750rpx; height: 450rpx;" >
+  </image> -->
+</scroll-view>

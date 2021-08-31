@@ -1,0 +1,11 @@
+<!--pages/member/member.wxml-->
+<scroll-view class="scrollview" scroll-y="true">
+  <image class="role1" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_3.png" style="width: 750rpx; height: 450rpx;" >
+  </image>
+  <image class="role2" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_4.png" style="width: 750rpx; height: 450rpx;" >
+  </image>
+  <image class="role3" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_5.png" style="width: 750rpx; height: 450rpx;" >
+  </image>
+  <image class="role4" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_6.png" style="width: 750rpx; height: 450rpx;" >
+  </image>
+</scroll-view>
