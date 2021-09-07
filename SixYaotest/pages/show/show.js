@@ -1,4 +1,9 @@
 // pages/show/show.js
+//灵签数据库
+const SpiritualDataDB=wx.cloud.database().collection("SixYao_SpiritualData")
+//解卦数据库
+const HexagramDataDB=wx.cloud.database().collection("SixYao_HexagramData")
+
 Page({
 
   /**
@@ -25,7 +30,9 @@ Page({
       {id:"001101",name:"雷火丰"},{id:"101100",name:"火山旅"},{id:"110110",name:"巽为风"},{id:"011011",name:"兑为泽"},{id:"110010",name:"风水涣"},{id:"010011",name:"水泽节"},
       {id:"110011",name:"风泽中孚"},{id:"001100",name:"雷山小过"},{id:"010101",name:"水火既济"},{id:"101010",name:"火水未济"}
     ],
+    //第几卦ID
     sixtyfourhexagramsid:"",
+    //卦名称
     sixtyfourhexagramsname:""
   },
 
@@ -33,6 +40,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //接收主页传送的上爻，下爻，动爻数据
     const eventChannel = this.getOpenerEventChannel();
     eventChannel.on('parentPageEmit', (data) => {
       // console.log(data);
@@ -42,7 +50,7 @@ Page({
         showmovingline:data.tempmovingline
       });
     });
-
+    //根据上爻，下爻数据，转换为二进制与六十四卦比对
     // var textqian,textdui,textli,textzhen,textxun,textkan,textgen,textkun;
     var switchtextshowupperhexagram;
     if(this.data.showupperhexagram==1)
@@ -79,10 +87,11 @@ Page({
       switchtextshowhexagram="100";
     if(this.data.showhexagram==0)
       switchtextshowhexagram="000";
-
+    //组合成新的二进制数组
     var mergehexagram=switchtextshowupperhexagram+switchtextshowhexagram;
+    //从data数据中拷贝出来六十四卦二进制数组
     var copythesixtyfourhexagrams=this.data.thesixtyfourhexagrams;
-
+    //与拷贝的数组进行比较，得出数组序号（第几卦）和名称
     for(var i=0;i<copythesixtyfourhexagrams.length;i++){
       if(mergehexagram==copythesixtyfourhexagrams[i].id)
         this.setData({
@@ -90,39 +99,48 @@ Page({
           sixtyfourhexagramsname:copythesixtyfourhexagrams[i].name
         })
     }
-    // console.log(this.data.sixtyfourhexagramsid+this.data.sixtyfourhexagramsname)
-      // eventChannel.on('parentPageEmit', function(data) {
-    //   console.log(data.tempupperhexagram)
-    //   this.setData({
-    //         showupperhexagram: data.tempupperhexagram,
-    //         showhexagram:data.temphexagram,
-    //         showmovingline:data.tempmovingline
-    //       });
+
+    //查询数据库灵签数据，根据第几卦ID找到数据并显示出来
+    // db.collection('SixYao_SpiritualData').doc('Hexagram_01').get({
+    //   success: function(res) {
+    //     // res.data 包含该记录的数据
+    //     console.log(res.data)
+    //   }
     // })
-    // eventChannel.on('parentPageEmit2', (data) => {
-    //   console.log(data);
-    //   this.setData({
-    //     showhexagram: data,
-    //   });
-    // });
-    // eventChannel.on('parentPageEmit3', (data) => {
-    //   console.log(data);
-    //   this.setData({
-    //     showmovingline: data,
-    //   });
-    // });
-    // console.log(options)
-    // const{a,b,c}=options;
-    // this._getlist(a,b,c);
+
+    // db.collection('SixYao_SpiritualData').where({
+    //   _id:"Hexagram_01"
+    // })
+    // .get({
+    //   success:function(res){
+    //     console.log(res.data)
+    //   }
+    // })
   },
 
-  // _getlist(a,b,c){
-  //   this.setData({
-  //     showupperhexagram:a,
-  //     showhexagram:b,
-  //     showmovingline:c
+  // addData() {
+  //   console.log('调用查询数据的方法')
+  //   SpiritualDataDB.add({
+  //     data:{
+  //       name:'panda bear',
+  //       price:9999
+  //     },
+  //     success(res) {
+  //       console.log("成功", res)
+  //     },
+  //     fail(res) {
+  //       console.log("失败", res)
+  //     }
   //   })
   // },
+  getData() {
+    console.log('调用查询数据的方法')
+    SpiritualDataDB.get({
+      success(res){
+        console.log('查询数据成功',res)
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
