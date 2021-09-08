@@ -18,22 +18,33 @@ Page({
     showmovingline:"",
     //六十四卦数组
     thesixtyfourhexagrams:[
-      {id:"111111",name:"乾为天"},{id:"000000",name:"坤为地"},{id:"010001",name:"水雷屯"},{id:"100010",name:"山水蒙"},{id:"010111",name:"水天需"},{id:"111010",name:"天水讼"},
-      {id:"000010",name:"地水师"},{id:"010000",name:"水地比"},{id:"110111",name:"风天小畜"},{id:"111011",name:"天泽履"},{id:"000111",name:"地天泰"},{id:"111000",name:"天地否"},
-      {id:"111101",name:"天火同人"},{id:"101111",name:"火天大有"},{id:"000100",name:"地山谦"},{id:"001000",name:"雷地豫"},{id:"011001",name:"泽雷随"},{id:"100110",name:"山风蛊"},
-      {id:"000011",name:"地泽临"},{id:"110000",name:"风地观"},{id:"101001",name:"火雷噬嗑"},{id:"100101",name:"山火贲"},{id:"100000",name:"山地剥"},{id:"000001",name:"地雷复"},
-      {id:"111001",name:"天雷无妄"},{id:"100111",name:"山天大畜"},{id:"100001",name:"山雷颐"},{id:"011110",name:"泽风大过"},{id:"010010",name:"坎为水"},{id:"101101",name:"离为火"},
-      {id:"011100",name:"泽山咸"},{id:"001110",name:"雷风恒"},{id:"111100",name:"天山遁"},{id:"001111",name:"雷天大壮"},{id:"101000",name:"火地晋"},{id:"000101",name:"地火明夷"},
-      {id:"110101",name:"风火家人"},{id:"101011",name:"火泽睽"},{id:"010100",name:"水山蹇"},{id:"001010",name:"雷水解"},{id:"100011",name:"山泽损"},{id:"110001",name:"风雷益"},
-      {id:"011111",name:"泽天夬"},{id:"111110",name:"天风姤"},{id:"011000",name:"泽地萃"},{id:"000110",name:"地风升"},{id:"011010",name:"泽水困"},{id:"010110",name:"水风井"},
-      {id:"011101",name:"泽火革"},{id:"101110",name:"火风鼎"},{id:"001001",name:"震为雷"},{id:"100100",name:"艮为山"},{id:"110100",name:"风山渐"},{id:"001011",name:"雷泽归妹"},
-      {id:"001101",name:"雷火丰"},{id:"101100",name:"火山旅"},{id:"110110",name:"巽为风"},{id:"011011",name:"兑为泽"},{id:"110010",name:"风水涣"},{id:"010011",name:"水泽节"},
-      {id:"110011",name:"风泽中孚"},{id:"001100",name:"雷山小过"},{id:"010101",name:"水火既济"},{id:"101010",name:"火水未济"}
+      {id:"111111",name:"乾为天",index:"Hexagram_01"},{id:"000000",name:"坤为地",index:"Hexagram_02"},{id:"010001",name:"水雷屯",index:"Hexagram_03"},{id:"100010",name:"山水蒙",index:"Hexagram_04"},
+      {id:"010111",name:"水天需",index:"Hexagram_05"},{id:"111010",name:"天水讼",index:"Hexagram_06"},{id:"000010",name:"地水师",index:"Hexagram_07"},{id:"010000",name:"水地比",index:"Hexagram_08"},
+      {id:"110111",name:"风天小畜",index:"Hexagram_09"},{id:"111011",name:"天泽履",index:"Hexagram_10"},{id:"000111",name:"地天泰",index:"Hexagram_11"},{id:"111000",name:"天地否",index:"Hexagram_12"},
+      {id:"111101",name:"天火同人",index:"Hexagram_13"},{id:"101111",name:"火天大有",index:"Hexagram_14"},{id:"000100",name:"地山谦",index:"Hexagram_15"},{id:"001000",name:"雷地豫",index:"Hexagram_16"},
+      {id:"011001",name:"泽雷随",index:"Hexagram_17"},{id:"100110",name:"山风蛊",index:"Hexagram_18"},{id:"000011",name:"地泽临",index:"Hexagram_19"},{id:"110000",name:"风地观",index:"Hexagram_20"},
+      {id:"101001",name:"火雷噬嗑",index:"Hexagram_21"},{id:"100101",name:"山火贲",index:"Hexagram_22"},{id:"100000",name:"山地剥",index:"Hexagram_23"},{id:"000001",name:"地雷复",index:"Hexagram_24"},
+      {id:"111001",name:"天雷无妄",index:"Hexagram_25"},{id:"100111",name:"山天大畜",index:"Hexagram_26"},{id:"100001",name:"山雷颐",index:"Hexagram_27"},{id:"011110",name:"泽风大过",index:"Hexagram_28"},
+      {id:"010010",name:"坎为水",index:"Hexagram_29"},{id:"101101",name:"离为火",index:"Hexagram_30"},{id:"011100",name:"泽山咸",index:"Hexagram_31"},{id:"001110",name:"雷风恒",index:"Hexagram_32"},
+      {id:"111100",name:"天山遁",index:"Hexagram_33"},{id:"001111",name:"雷天大壮",index:"Hexagram_34"},{id:"101000",name:"火地晋",index:"Hexagram_35"},{id:"000101",name:"地火明夷",index:"Hexagram_36"},
+      {id:"110101",name:"风火家人",index:"Hexagram_37"},{id:"101011",name:"火泽睽",index:"Hexagram_38"},{id:"010100",name:"水山蹇",index:"Hexagram_39"},{id:"001010",name:"雷水解",index:"Hexagram_40"},
+      {id:"100011",name:"山泽损",index:"Hexagram_41"},{id:"110001",name:"风雷益",index:"Hexagram_42"},{id:"011111",name:"泽天夬",index:"Hexagram_43"},{id:"111110",name:"天风姤",index:"Hexagram_44"},
+      {id:"011000",name:"泽地萃",index:"Hexagram_45"},{id:"000110",name:"地风升",index:"Hexagram_46"},{id:"011010",name:"泽水困",index:"Hexagram_47"},{id:"010110",name:"水风井",index:"Hexagram_48"},
+      {id:"011101",name:"泽火革",index:"Hexagram_49"},{id:"101110",name:"火风鼎",index:"Hexagram_50"},{id:"001001",name:"震为雷",index:"Hexagram_51"},{id:"100100",name:"艮为山",index:"Hexagram_52"},
+      {id:"110100",name:"风山渐",index:"Hexagram_53"},{id:"001011",name:"雷泽归妹",index:"Hexagram_54"},{id:"001101",name:"雷火丰",index:"Hexagram_55"},{id:"101100",name:"火山旅",index:"Hexagram_56"},
+      {id:"110110",name:"巽为风",index:"Hexagram_57"},{id:"011011",name:"兑为泽",index:"Hexagram_58"},{id:"110010",name:"风水涣",index:"Hexagram_59"},{id:"010011",name:"水泽节",index:"Hexagram_60"},
+      {id:"110011",name:"风泽中孚",index:"Hexagram_61"},{id:"001100",name:"雷山小过",index:"Hexagram_62"},{id:"010101",name:"水火既济",index:"Hexagram_63"},{id:"101010",name:"火水未济",index:"Hexagram_64"}
     ],
     //第几卦ID
     sixtyfourhexagramsid:"",
     //卦名称
-    sixtyfourhexagramsname:""
+    sixtyfourhexagramsname:"",
+
+    //灵签数据-从数据库获取
+    //灵签数据
+    spiritualdata:[],
+    //灵签数据长度
+    spiritualdatalength:""
   },
 
   /**
@@ -89,27 +100,61 @@ Page({
       switchtextshowhexagram="000";
     //组合成新的二进制数组
     var mergehexagram=switchtextshowupperhexagram+switchtextshowhexagram;
+
     //从data数据中拷贝出来六十四卦二进制数组
     var copythesixtyfourhexagrams=this.data.thesixtyfourhexagrams;
+
+    //this只是小区域，需要用that来指定大区域可用
+    let that=this
     //与拷贝的数组进行比较，得出数组序号（第几卦）和名称
     for(var i=0;i<copythesixtyfourhexagrams.length;i++){
       if(mergehexagram==copythesixtyfourhexagrams[i].id)
+      {
         this.setData({
           sixtyfourhexagramsid:copythesixtyfourhexagrams.indexOf(copythesixtyfourhexagrams[i]),
           sixtyfourhexagramsname:copythesixtyfourhexagrams[i].name
         })
+        console.log(copythesixtyfourhexagrams[i].name)
+        console.log(copythesixtyfourhexagrams[i].index)
+        //从数据库中查找到灵签数据
+        SpiritualDataDB.where({
+          _id:copythesixtyfourhexagrams[i].index,
+          _openid: "o_IPO5c6Urqy_pElay7ZL4N24Rtw"
+        })
+        .get({
+          success:function(res){
+            console.log("这是数据库数据",res.data)
+            that.setData({
+              //赋值给data中的变量
+              spiritualdata:res.data
+            })
+            console.log("这是赋值数据",that.data.spiritualdata)
+            //获取数据长度
+            var n=0;
+            for(var i in that.data.spiritualdata[0]){
+              n++
+            }
+            that.setData({
+              //赋值数据长度
+              spiritualdatalength:n
+            })
+            console.log("这是数组长度",that.data.spiritualdatalength)
+          }
+        })
+      }
     }
 
     //查询数据库灵签数据，根据第几卦ID找到数据并显示出来
-    // db.collection('SixYao_SpiritualData').doc('Hexagram_01').get({
+    // SpiritualDataDB.doc('Hexagram_01').get({
     //   success: function(res) {
     //     // res.data 包含该记录的数据
     //     console.log(res.data)
     //   }
     // })
 
-    // db.collection('SixYao_SpiritualData').where({
-    //   _id:"Hexagram_01"
+    // SpiritualDataDB.where({
+    //   _id:"Hexagram_01",
+    //   _openid: "o_IPO5c6Urqy_pElay7ZL4N24Rtw"
     // })
     // .get({
     //   success:function(res){
@@ -133,14 +178,14 @@ Page({
   //     }
   //   })
   // },
-  getData() {
-    console.log('调用查询数据的方法')
-    SpiritualDataDB.get({
-      success(res){
-        console.log('查询数据成功',res)
-      }
-    })
-  },
+  // getData() {
+  //   console.log('调用查询数据的方法')
+  //   SpiritualDataDB.get({
+  //     success(res){
+  //       console.log('查询数据成功',res)
+  //     }
+  //   })
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

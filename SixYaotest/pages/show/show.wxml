@@ -447,6 +447,64 @@
   <view class="movingline">
     <text>动爻：{{showmovingline}}</text>
   </view>
+  <!-- 根据数据长度显示内容 -->
+  <view wx:if="{{spiritualdatalength == 18}}"> 
+    <view class='spiritualdata' wx:for="{{spiritualdata}}"><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
+    <!--index为每个数据对应的下标-->
+      <view>卦名：{{item.name}}</view>
+      <view>象曰：{{item.xiangyue}}</view>
+      <view>{{item.content_01}}</view>
+      <view>{{item.content_01_des}}</view>
+      <view>{{item.content_02}}</view>
+      <view>{{item.content_02_des}}</view>
+      <view>{{item.content_03}}</view>
+      <view>{{item.content_03_des}}</view>
+      <view>{{item.content_04}}</view>
+      <view>{{item.content_04_des}}</view>
+      <view>{{item.content_05}}</view>
+      <view>{{item.content_05_des}}</view>
+      <view>{{item.content_06}}</view>
+      <view>{{item.content_06_des}}</view>
+      <view>{{item.content_07}}</view>
+      <view>{{item.content_07_des}}</view>
+    </view>
+  </view>
+  <view wx:elif="{{length == 16}}">
+    <view class='spiritualdata' wx:for="{{spiritualdata}}"><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
+    <!--index为每个数据对应的下标-->
+      <view>卦名：{{item.name}}</view>
+      <view>象曰：{{item.xiangyue}}</view>
+      <view>{{item.content_01}}</view>
+      <view>{{item.content_01_des}}</view>
+      <view>{{item.content_02}}</view>
+      <view>{{item.content_02_des}}</view>
+      <view>{{item.content_03}}</view>
+      <view>{{item.content_03_des}}</view>
+      <view>{{item.content_04}}</view>
+      <view>{{item.content_04_des}}</view>
+      <view>{{item.content_05}}</view>
+      <view>{{item.content_05_des}}</view>
+      <view>{{item.content_06}}</view>
+      <view>{{item.content_06_des}}</view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class='spiritualdata' wx:for="{{spiritualdata}}"><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
+    <!--index为每个数据对应的下标-->
+      <view>卦名：{{item.name}}</view>
+      <view>象曰：{{item.xiangyue}}</view>
+      <view>{{item.content_01}}</view>
+      <view>{{item.content_01_des}}</view>
+      <view>{{item.content_02}}</view>
+      <view>{{item.content_02_des}}</view>
+      <view>{{item.content_03}}</view>
+      <view>{{item.content_03_des}}</view>
+      <view>{{item.content_04}}</view>
+      <view>{{item.content_04_des}}</view>
+      <view>{{item.content_05}}</view>
+      <view>{{item.content_05_des}}</view>
+    </view>
+  </view>
   <!-- <button bindtap="addData">增加数据</button> -->
-  <button bindtap="getData">查询数据</button>
+  <!-- <button bindtap="getData">查询数据</button> -->
 </view>
