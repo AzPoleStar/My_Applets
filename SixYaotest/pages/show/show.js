@@ -143,24 +143,6 @@ Page({
         })
       }
     }
-
-    //查询数据库灵签数据，根据第几卦ID找到数据并显示出来
-    // SpiritualDataDB.doc('Hexagram_01').get({
-    //   success: function(res) {
-    //     // res.data 包含该记录的数据
-    //     console.log(res.data)
-    //   }
-    // })
-
-    // SpiritualDataDB.where({
-    //   _id:"Hexagram_01",
-    //   _openid: "o_IPO5c6Urqy_pElay7ZL4N24Rtw"
-    // })
-    // .get({
-    //   success:function(res){
-    //     console.log(res.data)
-    //   }
-    // })
   },
 
   // addData() {

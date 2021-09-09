@@ -453,7 +453,9 @@
     <!--index为每个数据对应的下标-->
       <view>卦名：{{item.name}}</view>
       <view>象曰：{{item.xiangyue}}</view>
-      <view>{{item.content_01}}</view>
+      <view>
+        <button type="primary" bindtap="content_01">{{item.content_01}}</button>
+      </view>
       <view>{{item.content_01_des}}</view>
       <view>{{item.content_02}}</view>
       <view>{{item.content_02_des}}</view>
@@ -489,8 +491,7 @@
     </view>
   </view>
   <view wx:else>
-    <view class='spiritualdata' wx:for="{{spiritualdata}}"><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
-    <!--index为每个数据对应的下标-->
+    <view class='spiritualdata' wx:key="{{spiritualdata}}">
       <view>卦名：{{item.name}}</view>
       <view>象曰：{{item.xiangyue}}</view>
       <view>{{item.content_01}}</view>
