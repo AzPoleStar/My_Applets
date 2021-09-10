@@ -1,11 +1,4 @@
-/* pages/show/show.wxss */
-.result{
-  width: 750rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 .sixtyfourhexagrams{
   /* width: 750rpx; */
   /* height: 200rpx; */
@@ -17,13 +10,6 @@
 .name{
   /* width: 750rpx;
   height: 200rpx; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.movingline{
-  height: 200rpx;
   display: flex;
   flex-direction: column;
   align-items: center;

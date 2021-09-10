@@ -444,68 +444,104 @@
       </view>
     </view>
   </view>
-  <view class="movingline">
-    <text>动爻：{{showmovingline}}</text>
-  </view>
   <!-- 根据数据长度显示内容 -->
   <view wx:if="{{spiritualdatalength == 18}}"> 
-    <view class='spiritualdata' wx:for="{{spiritualdata}}"><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
-    <!--index为每个数据对应的下标-->
-      <view>卦名：{{item.name}}</view>
-      <view>象曰：{{item.xiangyue}}</view>
-      <view>
-        <button type="primary" bindtap="content_01">{{item.content_01}}</button>
-      </view>
-      <view>{{item.content_01_des}}</view>
-      <view>{{item.content_02}}</view>
-      <view>{{item.content_02_des}}</view>
-      <view>{{item.content_03}}</view>
-      <view>{{item.content_03_des}}</view>
-      <view>{{item.content_04}}</view>
-      <view>{{item.content_04_des}}</view>
-      <view>{{item.content_05}}</view>
-      <view>{{item.content_05_des}}</view>
-      <view>{{item.content_06}}</view>
-      <view>{{item.content_06_des}}</view>
-      <view>{{item.content_07}}</view>
-      <view>{{item.content_07_des}}</view>
+    <view class="spiritualdata" wx:for="{{spiritualdata}}">
+      <view class="spiritualdata_name">{{item.name}}</view>
+      <view class="spiritualdata_xiangyue">{{item.xiangyue}}</view>
+
+      <view class="spiritualdata_content">
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_01">{{item.content_01}}</button>
+        </view>
+        <!-- <view>{{item.content_01_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_02">{{item.content_02}}</button>
+        </view>
+        <!-- <view>{{item.content_02_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_03">{{item.content_03}}</button>
+        </view>
+        <!-- <view>{{item.content_03_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_04">{{item.content_04}}</button>
+        </view>
+        <!-- <view>{{item.content_04_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_05">{{item.content_05}}</button>
+        </view>
+        <!-- <view>{{item.content_05_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_06">{{item.content_06}}</button>
+        </view>
+        <!-- <view>{{item.content_06_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_07">{{item.content_07}}</button>
+        </view>
+        <!-- <view>{{item.content_07_des}}</view> -->
+        </view>
     </view>
   </view>
   <view wx:elif="{{length == 16}}">
-    <view class='spiritualdata' wx:for="{{spiritualdata}}"><!--wx:for是微信数据绑定的一种方式，该数组有多少数据就显示多少个view-->
-    <!--index为每个数据对应的下标-->
-      <view>卦名：{{item.name}}</view>
-      <view>象曰：{{item.xiangyue}}</view>
-      <view>{{item.content_01}}</view>
-      <view>{{item.content_01_des}}</view>
-      <view>{{item.content_02}}</view>
-      <view>{{item.content_02_des}}</view>
-      <view>{{item.content_03}}</view>
-      <view>{{item.content_03_des}}</view>
-      <view>{{item.content_04}}</view>
-      <view>{{item.content_04_des}}</view>
-      <view>{{item.content_05}}</view>
-      <view>{{item.content_05_des}}</view>
-      <view>{{item.content_06}}</view>
-      <view>{{item.content_06_des}}</view>
+    <view class="spiritualdata" wx:for="{{spiritualdata}}">
+      <view class="spiritualdata_name">{{item.name}}</view>
+      <view class="spiritualdata_xiangyue">{{item.xiangyue}}</view>
+
+      <view class="spiritualdata_content">
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_01">{{item.content_01}}</button>
+        </view>
+        <!-- <view>{{item.content_01_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_02">{{item.content_02}}</button>
+        </view>
+        <!-- <view>{{item.content_02_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_03">{{item.content_03}}</button>
+        </view>
+        <!-- <view>{{item.content_03_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_04">{{item.content_04}}</button>
+        </view>
+        <!-- <view>{{item.content_04_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_05">{{item.content_05}}</button>
+        </view>
+        <!-- <view>{{item.content_05_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_06">{{item.content_06}}</button>
+        </view>
+        <!-- <view>{{item.content_06_des}}</view> -->
+    </view>
     </view>
   </view>
   <view wx:else>
-    <view class='spiritualdata' wx:key="{{spiritualdata}}">
-      <view>卦名：{{item.name}}</view>
-      <view>象曰：{{item.xiangyue}}</view>
-      <view>{{item.content_01}}</view>
-      <view>{{item.content_01_des}}</view>
-      <view>{{item.content_02}}</view>
-      <view>{{item.content_02_des}}</view>
-      <view>{{item.content_03}}</view>
-      <view>{{item.content_03_des}}</view>
-      <view>{{item.content_04}}</view>
-      <view>{{item.content_04_des}}</view>
-      <view>{{item.content_05}}</view>
-      <view>{{item.content_05_des}}</view>
+    <view class="spiritualdata" wx:for="{{spiritualdata}}">
+      <view class="spiritualdata_name">{{item.name}}</view>
+      <view class="spiritualdata_xiangyue">{{item.xiangyue}}</view>
+
+      <view class="spiritualdata_content">
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_01">{{item.content_01}}</button>
+        </view>
+        <!-- <view>{{item.content_01_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_02">{{item.content_02}}</button>
+        </view>
+        <!-- <view>{{item.content_02_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_03">{{item.content_03}}</button>
+        </view>
+        <!-- <view>{{item.content_03_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_04">{{item.content_04}}</button>
+        </view>
+        <!-- <view>{{item.content_04_des}}</view> -->
+        <view>
+          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_05">{{item.content_05}}</button>
+        </view>
+        <!-- <view>{{item.content_05_des}}</view> -->
+      </view>
     </view>
   </view>
-  <!-- <button bindtap="addData">增加数据</button> -->
-  <!-- <button bindtap="getData">查询数据</button> -->
 </view>

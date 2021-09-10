@@ -17,7 +17,7 @@ Page({
       nowminute:59,
       nowsecond:59,
     //农历年数据
-      ganzhi:"2",
+      ganzhi:2,
       showganzhi:"辛丑",
     //农历月
       lunarmonth:"",
@@ -56,17 +56,6 @@ Page({
   },
   //设置时间函数
   settime:function(){
-    // var mydata=new Date();
-    // this.setData({
-    //   nowdata: {
-    //     year: mydata.getFullYear(),
-    //     month: mydata.getMonth(),
-    //     day: mydata.getDate() ,
-    //     hour: mydata.getHours() ,
-    //     minute: mydata.getMinutes()
-    // }
-    // })
-    // console.log(nowdata.Date)
 
     var timestemp=Date.parse(new Date())
     var date=new Date(timestemp)
@@ -75,18 +64,9 @@ Page({
     var month=date.getMonth()+1;
     var day=date.getDate();
 
-    // var a=this.yearDays(year);
-    // var b=this.leapDays(year);
-    // var c=this.leapMonth(year);
-    // var d=this.monthDays(year,month);
-    // var e=this.getChinaDayString(day);
-    // console.log(a+" "+b+" "+c+" "+d+" "+e)
-
     var hour=date.getHours();
     var minute=date.getMinutes();
     var second=date.getSeconds();
-
-    // console.log(year+"_"+month+"_"+day+"_"+hour+"_"+minute+"_"+second)
 
     this.setData({
       nowyear:year,
@@ -101,27 +81,7 @@ Page({
     //计算时辰
     this.caltime(hour);
 
-    // console.log(this.data.nowyear+"_"+this.data.nowmonth+"_"+this.data.nowday+"_"+this.data.nowhour+"_"+this.data.nowmonth+"_"+this.data.nowsecond)
   },
-  // refreshtime:function(){
-  //   var that=this;
-  //   var times=0;
-  //   var i=setInterval(() => {
-  //     times++
-  //     that.settime()
-  //   }, 1000);
-  // },
-  // startInter:function(){
-  //   var that=this;
-  //   that.data.inter=setInterval(() => {
-  //     that.settime()
-  //     console.log(123)
-  //   }, 1000);
-  // },
-  // endInter:function(){
-  //   var taht=this;
-  //   that.clearInterval(that.data.inter)
-  // },
   /**
    * 用时间计算六爻
    */
@@ -158,13 +118,8 @@ Page({
       success: (res) => {
         // 通过eventChannel向被打开页面传送数据
         res.eventChannel.emit('parentPageEmit', { tempupperhexagram,temphexagram,tempmovingline });
-        // res.eventChannel.emit('parentPageEmit2', { data: temphexagram });
-        // res.eventChannel.emit('parentPageEmit3', { data: tempmovingline });
       },
     })
-    // wx.navigateTo({ 
-    //   url: '/pages/show/show?showupperhexagram=${calupperhexagram}&showhexagram=${calhexagram}&showmovingline=${calmovingline}',
-    // })
   },
   /**
    * 重新获取时间

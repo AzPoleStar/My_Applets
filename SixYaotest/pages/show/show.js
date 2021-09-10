@@ -61,8 +61,8 @@ Page({
         showmovingline:data.tempmovingline
       });
     });
+    console.log("动爻：",this.data.showmovingline)
     //根据上爻，下爻数据，转换为二进制与六十四卦比对
-    // var textqian,textdui,textli,textzhen,textxun,textkan,textgen,textkun;
     var switchtextshowupperhexagram;
     if(this.data.showupperhexagram==1)
       switchtextshowupperhexagram="111";
@@ -145,29 +145,107 @@ Page({
     }
   },
 
-  // addData() {
-  //   console.log('调用查询数据的方法')
-  //   SpiritualDataDB.add({
-  //     data:{
-  //       name:'panda bear',
-  //       price:9999
-  //     },
-  //     success(res) {
-  //       console.log("成功", res)
-  //     },
-  //     fail(res) {
-  //       console.log("失败", res)
-  //     }
-  //   })
-  // },
-  // getData() {
-  //   console.log('调用查询数据的方法')
-  //   SpiritualDataDB.get({
-  //     success(res){
-  //       console.log('查询数据成功',res)
-  //     }
-  //   })
-  // },
+  /**
+   * 这是内容点击按钮处理
+   */
+  show_content_01:function(){
+    var copyspiritualdata=this.data.spiritualdata;
+    var contentindex=1;
+    var templength=this.data.spiritualdatalength
+
+    wx.navigateTo({
+      url:'/pages/content/content',
+       // 打开的目标页面
+      success: (res) => {
+        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+      },
+    })
+  },
+  show_content_02:function(){
+    var copyspiritualdata=this.data.spiritualdata;
+    var contentindex=2;
+    var templength=this.data.spiritualdatalength
+
+    wx.navigateTo({
+      url:'/pages/content/content',
+       // 打开的目标页面
+      success: (res) => {
+        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+      },
+    })
+  },
+  show_content_03:function(){
+    var copyspiritualdata=this.data.spiritualdata;
+    var contentindex=3;
+    var templength=this.data.spiritualdatalength
+
+    wx.navigateTo({
+      url:'/pages/content/content',
+       // 打开的目标页面
+      success: (res) => {
+        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+      },
+    })
+  },
+  show_content_04:function(){
+    var copyspiritualdata=this.data.spiritualdata;
+    var contentindex=4;
+    var templength=this.data.spiritualdatalength
+
+    wx.navigateTo({
+      url:'/pages/content/content',
+       // 打开的目标页面
+      success: (res) => {
+        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+      },
+    })
+  },
+  show_content_05:function(){
+    var copyspiritualdata=this.data.spiritualdata;
+    var contentindex=5;
+    var templength=this.data.spiritualdatalength
+
+    wx.navigateTo({
+      url:'/pages/content/content',
+       // 打开的目标页面
+      success: (res) => {
+        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+      },
+    })
+  },
+  show_content_06:function(){
+    var copyspiritualdata=this.data.spiritualdata;
+    var contentindex=6;
+    var templength=this.data.spiritualdatalength
+
+    wx.navigateTo({
+      url:'/pages/content/content',
+       // 打开的目标页面
+      success: (res) => {
+        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+      },
+    })
+  },
+  show_content_07:function(){
+    var copyspiritualdata=this.data.spiritualdata;
+    var contentindex=7;
+    var templength=this.data.spiritualdatalength
+
+    wx.navigateTo({
+      url:'/pages/content/content',
+       // 打开的目标页面
+      success: (res) => {
+        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+      },
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
