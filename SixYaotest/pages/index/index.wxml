@@ -2,18 +2,25 @@
 <view class="container">
   <view class="page-body">
     <form catchsubmit="formSubmit" catchreset="formReset">
-    <view class="picture-title">
-      <image src="/pages/resourse/picture/tit.png" mode="aspectFit">
-      </image>
+    <view class="bg-img bg-mask padding-tb-xl" style="background-image: url('/pages/resourse/picture/bag.png');height: 441rpx;width: 750rpx;">
+    <view class="padding-xl text-white">
+      <view class="padding-xs text-xxl text-bold">
+        预测卜问得先知!
+        我命由我不由天！
+      </view>
+      <view class="padding-xs text-xl">
+        Predict the prophet, my life is from me, not from heaven!
+      </view>
     </view>
+  </view>
 
-      <view class="page-section1">
+      <!-- <view class="page-section1">
         <view class="page-section1-title">性别</view>
         <radio-group name="radio">
           <label><radio value="radio1"/>男</label>
           <label><radio value="radio2"/>女</label>
         </radio-group>
-      </view>
+      </view> -->
 
       <!-- <view class="page-section2">
         <view class="page-section2-title">占问事项</view>

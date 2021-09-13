@@ -78,7 +78,7 @@ Page({
       switchtextshowupperhexagram="010";
     if(this.data.showupperhexagram==7)
       switchtextshowupperhexagram="100";
-    if(this.data.showupperhexagram==0)
+    if(this.data.showupperhexagram==8)
       switchtextshowupperhexagram="000";
     
     var switchtextshowhexagram;
@@ -96,7 +96,7 @@ Page({
       switchtextshowhexagram="010";
     if(this.data.showhexagram==7)
       switchtextshowhexagram="100";
-    if(this.data.showhexagram==0)
+    if(this.data.showhexagram==8)
       switchtextshowhexagram="000";
     //组合成新的二进制数组
     var mergehexagram=switchtextshowupperhexagram+switchtextshowhexagram;

@@ -447,8 +447,8 @@
   <!-- 根据数据长度显示内容 -->
   <view wx:if="{{spiritualdatalength == 18}}"> 
     <view class="spiritualdata" wx:for="{{spiritualdata}}">
-      <view class="spiritualdata_name">{{item.name}}</view>
-      <view class="spiritualdata_xiangyue">{{item.xiangyue}}</view>
+      <view class="spiritualdata_name">卦名：{{item.name}}</view>
+      <view class="spiritualdata_xiangyue">象曰：{{item.xiangyue}}</view>
 
       <view class="spiritualdata_content">
         <view>
@@ -484,8 +484,8 @@
   </view>
   <view wx:elif="{{length == 16}}">
     <view class="spiritualdata" wx:for="{{spiritualdata}}">
-      <view class="spiritualdata_name">{{item.name}}</view>
-      <view class="spiritualdata_xiangyue">{{item.xiangyue}}</view>
+      <view class="spiritualdata_name">卦名：{{item.name}}</view>
+      <view class="spiritualdata_xiangyue">象曰：{{item.xiangyue}}</view>
 
       <view class="spiritualdata_content">
         <view>
@@ -517,8 +517,8 @@
   </view>
   <view wx:else>
     <view class="spiritualdata" wx:for="{{spiritualdata}}">
-      <view class="spiritualdata_name">{{item.name}}</view>
-      <view class="spiritualdata_xiangyue">{{item.xiangyue}}</view>
+      <view class="spiritualdata_name">卦名：{{item.name}}</view>
+      <view class="spiritualdata_xiangyue">象曰：{{item.xiangyue}}</view>
 
       <view class="spiritualdata_content">
         <view>
