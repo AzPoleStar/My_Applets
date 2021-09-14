@@ -3729,6 +3729,11 @@ scroll-view.cu-steps .cu-item {
 	background-repeat: no-repeat;
 }
 
+.bg-masklow {
+	background-color: var(--darkGray);
+	position: relative;
+}
+
 .bg-mask {
 	background-color: var(--black);
 	position: relative;

@@ -1,64 +1,6 @@
 <!--pages/show/show.wxml-->
-<view class="result">
-  <!-- <view class="upperhexagram">
-    <view>
-      <text>上卦：{{showupperhexagram}}</text>
-    </view>
-    <view wx:if="{{showupperhexagram==1}}">
-      <image src="/pages/resourse/picture/1.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showupperhexagram==2}}">
-      <image src="/pages/resourse/picture/2.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showupperhexagram==3}}">
-      <image src="/pages/resourse/picture/3.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showupperhexagram==4}}">
-      <image src="/pages/resourse/picture/4.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showupperhexagram==5}}">
-      <image src="/pages/resourse/picture/5.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showupperhexagram==6}}">
-      <image src="/pages/resourse/picture/6.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showupperhexagram==7}}">
-      <image src="/pages/resourse/picture/7.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showupperhexagram==8}}">
-      <image src="/pages/resourse/picture/0.jpg" mode="aspectFit"></image>
-    </view>
-  </view>
-  <view class="hexagram">
-    <view>
-      <text>下卦：{{showhexagram}}</text>
-    </view>
-    <view wx:if="{{showhexagram==1}}">
-      <image src="/pages/resourse/picture/1.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showhexagram==2}}">
-      <image src="/pages/resourse/picture/2.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showhexagram==3}}">
-      <image src="/pages/resourse/picture/3.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showhexagram==4}}">
-      <image src="/pages/resourse/picture/4.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showhexagram==5}}">
-      <image src="/pages/resourse/picture/5.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showhexagram==6}}">
-      <image src="/pages/resourse/picture/6.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showhexagram==7}}">
-      <image src="/pages/resourse/picture/7.jpg" mode="aspectFit"></image>
-    </view>
-    <view wx:if="{{showhexagram==8}}">
-      <image src="/pages/resourse/picture/0.jpg" mode="aspectFit"></image>
-    </view>
-  </view> -->
-  <view class="sixtyfourhexagrams">
+<view class="bg-img bg-mask padding-tb-xl" style="background-image: url('/resource/Bg01.png');height: 1200rpx;">
+  <view class="sixtyfourhexagrams padding text-xl text-white">
     <view wx:if="{{sixtyfourhexagramsid==0}}">
       <image src="/resource/1乾为天.gif" mode="aspectFit"></image>
       <view class="name">
