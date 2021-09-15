@@ -1,401 +1,212 @@
 <!--pages/show/show.wxml-->
 <view class="bg-img bg-mask padding-tb-xl" style="background-image: url('/resource/Bg01.png');height: 1200rpx;">
-  <view class="sixtyfourhexagrams padding text-xl text-white">
+
+  <view class="padding text-center text-xxl text-bold text-orange">{{sixtyfourhexagramsname}}</view>
+  <view class="picture padding-lg">
     <view wx:if="{{sixtyfourhexagramsid==0}}">
       <image src="/resource/1乾为天.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==1}}">
       <image src="/resource/2坤为地.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==2}}">
       <image src="/resource/3水雷屯.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==3}}">
       <image src="/resource/4山水蒙.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==4}}">
       <image src="/resource/5水天需.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==5}}">
       <image src="/resource/6天水讼.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==6}}">
       <image src="/resource/7地水师.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==7}}">
       <image src="/resource/8水地比.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==8}}">
       <image src="/resource/9风天小畜.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==9}}">
       <image src="/resource/10天泽履.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==10}}">
       <image src="/resource/11地天泰.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==11}}">
       <image src="/resource/12天地否.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==12}}">
       <image src="/resource/13天火同人.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==13}}">
       <image src="/resource/14火天大有.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==14}}">
       <image src="/resource/15地山谦.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==15}}">
       <image src="/resource/16雷地豫.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==16}}">
       <image src="/resource/17泽雷随.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==17}}">
       <image src="/resource/18山风蛊.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==18}}">
       <image src="/resource/19地泽临.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==19}}">
       <image src="/resource/20风地观.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==20}}">
       <image src="/resource/21火雷噬嗑.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==21}}">
       <image src="/resource/22山火贲.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==22}}">
       <image src="/resource/23山地剥.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==23}}">
       <image src="/resource/24地雷复.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==24}}">
       <image src="/resource/25天雷无妄.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==25}}">
       <image src="/resource/26山天大畜.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==26}}">
       <image src="/resource/27山雷颐.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==27}}">
       <image src="/resource/28泽风大过.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==28}}">
       <image src="/resource/29坎为水.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==29}}">
       <image src="/resource/30离为火.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==30}}">
       <image src="/resource/31泽山咸.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==31}}">
       <image src="/resource/32雷风恒.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==32}}">
       <image src="/resource/33天山遁.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==33}}">
       <image src="/resource/34雷天大壮.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==34}}">
       <image src="/resource/35火地晋.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==35}}">
       <image src="/resource/36地火明夷.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==36}}">
       <image src="/resource/37风火家人.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==37}}">
       <image src="/resource/38火泽睽.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==38}}">
       <image src="/resource/39水山蹇.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==39}}">
       <image src="/resource/40雷水解.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==40}}">
       <image src="/resource/41山泽损.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==41}}">
       <image src="/resource/42风雷益.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==42}}">
       <image src="/resource/43泽天夬.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==43}}">
       <image src="/resource/44天风姤.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==44}}">
       <image src="/resource/45泽地萃.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==45}}">
       <image src="/resource/46地风升.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==46}}">
       <image src="/resource/47泽水困.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==47}}">
       <image src="/resource/48水风井.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==48}}">
       <image src="/resource/49泽火革.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==49}}">
       <image src="/resource/50火风鼎.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==50}}">
       <image src="/resource/51震为雷.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==51}}">
       <image src="/resource/52艮为山.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==52}}">
       <image src="/resource/53风山渐.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==53}}">
       <image src="/resource/54雷泽归妹.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==54}}">
       <image src="/resource/55雷火丰.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==55}}">
       <image src="/resource/56火山旅.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==56}}">
       <image src="/resource/57巽为风.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==57}}">
       <image src="/resource/58兑为泽.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==58}}">
       <image src="/resource/59风水涣.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==59}}">
       <image src="/resource/60水泽节.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==60}}">
       <image src="/resource/61风泽中孚.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==61}}">
       <image src="/resource/62雷山小过.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==62}}">
       <image src="/resource/63水火既济.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
     <view wx:if="{{sixtyfourhexagramsid==63}}">
       <image src="/resource/64火水未济.gif" mode="aspectFit"></image>
-      <view class="name">
-        <text>{{sixtyfourhexagramsname}}</text>
-      </view>
     </view>
   </view>
   <!-- 根据数据长度显示内容 -->
   <view wx:if="{{spiritualdatalength == 18}}"> 
     <view class="spiritualdata" wx:for="{{spiritualdata}}">
-      <view class="spiritualdata_name">卦名：{{item.name}}</view>
-      <view class="spiritualdata_xiangyue">象曰：{{item.xiangyue}}</view>
+      <view class="padding radius shadow bg-shadeTop">卦名：{{item.name}}</view>
+      <view class="padding radius shadow bg-shadeTop">象曰：{{item.xiangyue}}</view>
+      <view class="padding radius shadow bg-shadeTop">运势：{{item.content_01_des}}</view>
 
       <view class="spiritualdata_content">
-        <view>
+        <!-- <view>
           <button class="mini-btn" type="primary" size="mini" bindtap="show_content_01">{{item.content_01}}</button>
-        </view>
+        </view> -->
         <!-- <view>{{item.content_01_des}}</view> -->
         <view>
           <button class="mini-btn" type="primary" size="mini" bindtap="show_content_02">{{item.content_02}}</button>

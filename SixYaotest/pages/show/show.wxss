@@ -1,17 +1,8 @@
-
-.sixtyfourhexagrams{
-  /* width: 750rpx; */
-  /* height: 200rpx; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.picture{
+  display:flex;                    
   justify-content: center;
 }
-.name{
-  /* width: 750rpx;
-  height: 200rpx; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.picture image {
+  width:350rpx;
+  height:350rpx;
 }
