@@ -1,7 +1,9 @@
 <!--pages/show/show.wxml-->
+<view class="bg-dark">
 <view class="bg-img bg-mask padding-tb-xl" style="background-image: url('/resource/Bg01.png');height: 1200rpx;">
-
+  <!-- 卦名 -->
   <view class="padding text-center text-xxl text-bold text-orange">{{sixtyfourhexagramsname}}</view>
+  <!-- 卦图 -->
   <view class="picture padding-lg">
     <view wx:if="{{sixtyfourhexagramsid==0}}">
       <image src="/resource/1乾为天.gif" mode="aspectFit"></image>
@@ -196,105 +198,71 @@
       <image src="/resource/64火水未济.gif" mode="aspectFit"></image>
     </view>
   </view>
-  <!-- 根据数据长度显示内容 -->
-  <view wx:if="{{spiritualdatalength == 18}}"> 
-    <view class="spiritualdata" wx:for="{{spiritualdata}}">
-      <view class="padding radius shadow bg-shadeTop">卦名：{{item.name}}</view>
-      <view class="padding radius shadow bg-shadeTop">象曰：{{item.xiangyue}}</view>
-      <view class="padding radius shadow bg-shadeTop">运势：{{item.content_01_des}}</view>
-
-      <view class="spiritualdata_content">
-        <!-- <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_01">{{item.content_01}}</button>
-        </view> -->
-        <!-- <view>{{item.content_01_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_02">{{item.content_02}}</button>
-        </view>
-        <!-- <view>{{item.content_02_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_03">{{item.content_03}}</button>
-        </view>
-        <!-- <view>{{item.content_03_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_04">{{item.content_04}}</button>
-        </view>
-        <!-- <view>{{item.content_04_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_05">{{item.content_05}}</button>
-        </view>
-        <!-- <view>{{item.content_05_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_06">{{item.content_06}}</button>
-        </view>
-        <!-- <view>{{item.content_06_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_07">{{item.content_07}}</button>
-        </view>
-        <!-- <view>{{item.content_07_des}}</view> -->
-        </view>
+  <!-- 显示文本内容 -->
+  <view class="spiritualdata" wx:for="{{spiritualdata}}">
+    <view class="padding radius shadow bg-shadeTop">
+      <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:18px">
+        卦名
+      </view>
+      <view class="padding-xs text-lg text-left">
+        {{item.name}}
+      </view>
     </view>
-  </view>
-  <view wx:elif="{{length == 16}}">
-    <view class="spiritualdata" wx:for="{{spiritualdata}}">
-      <view class="spiritualdata_name">卦名：{{item.name}}</view>
-      <view class="spiritualdata_xiangyue">象曰：{{item.xiangyue}}</view>
-
-      <view class="spiritualdata_content">
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_01">{{item.content_01}}</button>
-        </view>
-        <!-- <view>{{item.content_01_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_02">{{item.content_02}}</button>
-        </view>
-        <!-- <view>{{item.content_02_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_03">{{item.content_03}}</button>
-        </view>
-        <!-- <view>{{item.content_03_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_04">{{item.content_04}}</button>
-        </view>
-        <!-- <view>{{item.content_04_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_05">{{item.content_05}}</button>
-        </view>
-        <!-- <view>{{item.content_05_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_06">{{item.content_06}}</button>
-        </view>
-        <!-- <view>{{item.content_06_des}}</view> -->
+    <view class="padding radius shadow bg-shadeTop">
+      <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:18px">
+        象曰
+      </view>
+      <view class="padding-xs text-lg text-left">
+        {{item.xiangyue}}
+      </view>
     </view>
+    <view class="padding radius shadow bg-shadeTop">
+      <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:18px">
+        运势
+      </view>
+      <view class="padding-xs text-lg text-left">
+        {{item.content_01_des}}
+      </view>
     </view>
-  </view>
-  <view wx:else>
-    <view class="spiritualdata" wx:for="{{spiritualdata}}">
-      <view class="spiritualdata_name">卦名：{{item.name}}</view>
-      <view class="spiritualdata_xiangyue">象曰：{{item.xiangyue}}</view>
-
-      <view class="spiritualdata_content">
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_01">{{item.content_01}}</button>
+    <!-- 标题 -->
+    <view class="cu-bar bg-black solid-bottom margin-top text-lg text-bold">
+      <view>
+        <text class="padding-xs cuIcon-title text-orange "></text> 预测事项
+      </view>
+    </view>
+    <!-- 列表项 -->
+    <view class="cu-list grid col-3">
+      <view class="cu-item bg-dark" bindtap="show_content_02">
+        <view class="cuIcon-goodsfill text-cyan">
         </view>
-        <!-- <view>{{item.content_01_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_02">{{item.content_02}}</button>
+        <view class="text-white">{{item.content_02}}</view>
+      </view>
+      <view class="cu-item bg-dark" bindtap="show_content_03">
+        <view class="cuIcon-sponsorfill text-orange">
         </view>
-        <!-- <view>{{item.content_02_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_03">{{item.content_03}}</button>
+        <view class="text-white">{{item.content_03}}</view>
+      </view>
+      <view class="cu-item bg-dark" bindtap="show_content_04">
+        <view class="cuIcon-likefill text-red">
         </view>
-        <!-- <view>{{item.content_03_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_04">{{item.content_04}}</button>
+        <view class="text-white">{{item.content_04}}</view>
+      </view>
+      <view class="cu-item bg-dark" bindtap="show_content_05">
+        <view class="cuIcon-emojifill text-green">
         </view>
-        <!-- <view>{{item.content_04_des}}</view> -->
-        <view>
-          <button class="mini-btn" type="primary" size="mini" bindtap="show_content_05">{{item.content_05}}</button>
+        <view class="text-white">{{item.content_05}}</view>
+      </view>
+      <view class="cu-item bg-dark" bindtap="show_content_06">
+        <view class="cuIcon-writefill text-blue">
         </view>
-        <!-- <view>{{item.content_05_des}}</view> -->
+        <view class="text-white">{{item.content_06}}</view>
+      </view>
+      <view class="cu-item bg-dark" bindtap="show_content_07">
+        <view class="cuIcon-formfill text-mauve">
+        </view>
+        <view class="text-white">{{item.content_07}}</view>
       </view>
     </view>
   </view>
+</view>
 </view>

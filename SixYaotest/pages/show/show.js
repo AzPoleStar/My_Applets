@@ -5,7 +5,6 @@ const SpiritualDataDB=wx.cloud.database().collection("SixYao_SpiritualData")
 const HexagramDataDB=wx.cloud.database().collection("SixYao_HexagramData")
 
 Page({
-
   /**
    * 页面的初始数据
    */

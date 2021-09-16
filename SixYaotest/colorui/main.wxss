@@ -3502,6 +3502,11 @@ scroll-view.cu-steps .cu-item {
 	color: var(--white);
 }
 
+.bg-dark {
+	background-color:  rgba(6, 6, 6, 0.95);
+	color: var(--white);
+}
+
 .bg-white {
 	background-color: var(--white);
 	color: var(--darkGray);
