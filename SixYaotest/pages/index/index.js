@@ -157,9 +157,8 @@ Page({
       for(var j=0;j<shichen[i].length;j++){
       
         if(day==shichen[i][j]){
-          // return shichen.indexOf(shichen[i])
           this.setData({
-            frombirth:shichen.indexOf(shichen[i]),
+            frombirth:shichen.indexOf(shichen[i])+1,
             showfrombirth:shichen[i][0]
           })
         }
