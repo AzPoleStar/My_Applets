@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="bg-black">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+    <view class="bg-img bg-mask padding-tb-xl" style="background-image:url(/resource/Bg01.png)">
+      <view class="padding-xl text-white">
+        <view class="padding text-sl text-bold">
+          <text>预测卜问得先知\n我命由我不由天</text> 
+        </view>
+        <view class="padding text-xl">
+          Predict the prophet, my life is from me, not from heaven!
+        </view>
+      </view>
+      <view class="text-center text-shadow text-orange text-xxl text-bold">时间起卦</view>
+      <view class="padding text-center">
+        <view class="padding text-xl text-yellow">
+          <text>{{nowyear}}年</text>
+          <text>{{nowmonth}}月</text>
+          <text>{{nowday}}日</text>
+          <text>{{nowhour}}时</text>
+          <text>{{nowminute}}分</text>
+          <text>{{nowsecond}}秒</text>
+        </view>
+        <view class="text-lg">
+          <text>农历：{{showganzhi}}年 {{showlunarmonth}}月{{showlunarday}} {{showfrombirth}}</text>
+        </view>
+      </view>
+      <view class="padding flex flex-direction">
+        <button class="cu-btn bg-grey lg" formType="reset">获取时间</button>
+        <button class="cu-btn bg-red margin-tb-sm lg" formType="submit">开始排盘</button>
+      </view>
+      <view class="text-center text-red text-sm">
+        <text>
+          不诚不占：此乃求教于神明，首重真诚。\n不义不占：不合乎正当性及合理性的问题不必占问。\n不疑不占：必须是理性难以测度之事。
+        </text>
+      </view>
+    </view>
+    </form>
+</view>

@@ -1,0 +1,1 @@
+"D:\ProfessionaSoftware\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-7gy29yhwf740ef6f --n quickstartFunctions --r --project "E:\Applets\My_Applets\SixYao" --report_start --report

@@ -1,0 +1,46 @@
+<view class="bg-img bg-mask padding-tb-xl" style="background-image: url('/resource/Bg01.png')">
+    <view class="padding radius shadow bg-shadeTop">
+        <view wx:if="{{contentindexdata == 1}}">
+            <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+                {{content1data}}
+            </view>
+            <view class="padding-xs text-lg text-left">{{content1_desdata}}</view>
+        </view>
+        <view wx:if="{{contentindexdata == 2}}">
+            <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+                {{content2data}}
+            </view>
+            <view class="padding-xs text-lg text-left">{{content2_desdata}}</view>
+        </view>
+        <view wx:if="{{contentindexdata == 3}}">
+            <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+                {{content3data}}
+            </view>
+            <view class="padding-xs text-lg text-left">{{content3_desdata}}</view>
+        </view>
+        <view wx:if="{{contentindexdata == 4}}">
+            <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+                {{content4data}}
+            </view>
+            <view class="padding-xs text-lg text-left">{{content4_desdata}}</view>
+        </view>
+        <view wx:if="{{contentindexdata == 5}}">
+            <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+                {{content5data}}
+            </view>
+            <view class="padding-xs text-lg text-left">{{content5_desdata}}</view>
+        </view>
+        <view wx:if="{{contentindexdata == 6}}">
+            <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+                {{content6data}}
+            </view>
+            <view class="padding-xs text-lg text-left">{{content6_desdata}}</view>
+        </view>
+        <view wx:if="{{contentindexdata == 7}}">
+            <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+                {{content7data}}
+            </view>
+            <view class="padding-xs text-lg text-left">{{content7_desdata}}</view>
+        </view>
+    </view>
+</view>
