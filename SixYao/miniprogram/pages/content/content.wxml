@@ -1,4 +1,4 @@
-<view class="bg-img bg-mask padding-tb-xl" style="background-image: url('/resource/Bg01.png')">
+<view class="padding-tb-xl">
     <view class="padding radius shadow bg-shadeTop">
         <view wx:if="{{contentindexdata == 1}}">
             <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">

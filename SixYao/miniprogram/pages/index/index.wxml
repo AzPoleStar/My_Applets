@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="bg-black">
     <form catchsubmit="formSubmit" catchreset="formReset">
-    <view class="bg-img bg-mask padding-tb-xl" style="background-image:url(/resource/Bg01.png)">
+    <view class="bg-img bg-mask padding-tb-xl" style="background-image:url({{background}});width:750rpx;height:1200rpx;">
       <view class="padding-xl text-white">
         <view class="padding text-sl text-bold">
           <text>预测卜问得先知\n我命由我不由天</text> 

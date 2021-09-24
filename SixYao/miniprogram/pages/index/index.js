@@ -52,7 +52,10 @@ Page({
     //下卦
     hexagram:"",
     //动爻
-    movingline:""
+    movingline:"",
+
+    //背景图
+    background:""
   },
   //设置时间函数
   settime:function(){
@@ -87,7 +90,7 @@ Page({
    */
   formSubmit:function(){
 
-    var that=this;
+   let that=this;
 
     var calyear=that.data.ganzhi;
     var calmonth=that.data.lunarmonth;
@@ -135,7 +138,13 @@ Page({
    * 加载时获取时间
    */
   onLoad: function (options) {
+    // 计算时间
     this.settime();
+    //设置背景图
+    var backgrounddata=app.globalData.background;
+    this.setData({
+      background:backgrounddata
+    })
   },
   /**
    * 计算十二时辰

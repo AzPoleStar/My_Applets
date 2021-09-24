@@ -23,13 +23,23 @@ Page({
         content6data:"",
         content6_desdata:"",
         content7data:"",
-        content7_desdata:""
+        content7_desdata:"",
+        // //背景图
+        // background:""
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+
+        // //设置背景图
+        // var app=getApp();
+        // var backgrounddata=app.globalData.background;
+        // this.setData({
+        // background:backgrounddata
+        // })
+
         const neweventChannel = this.getOpenerEventChannel();
         neweventChannel.on('newparentPageEmit', (data) => {
         // console.log(data);

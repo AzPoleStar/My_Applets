@@ -38,7 +38,7 @@
     },
     "appid": "wxb4dc176d15714310",
     "projectname": "LiuYaoYiGua",
-    "libVersion": "2.19.2",
+    "libVersion": "2.19.5",
     "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
     "condition": {
         "search": {

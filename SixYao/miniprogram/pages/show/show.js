@@ -43,7 +43,7 @@ Page({
     //灵签数据
     spiritualdata:[],
     //灵签数据长度
-    spiritualdatalength:""
+    spiritualdatalength:"",
   },
 
   /**
@@ -63,92 +63,90 @@ Page({
       console.log("上爻：",that.data.showupperhexagram)
       console.log("下爻：",that.data.showhexagram)
       console.log("动爻：",that.data.showmovingline)
-    });
-    // console.log("上爻：",that.data.showupperhexagram)
-    // console.log("下爻：",that.data.showhexagram)
-    // console.log("动爻：",that.data.showmovingline)
-    //根据上爻，下爻数据，转换为二进制与六十四卦比对
-    var switchtextshowupperhexagram;
-    if(that.data.showupperhexagram==1)
-      switchtextshowupperhexagram="111";
-    if(that.data.showupperhexagram==2)
-      switchtextshowupperhexagram="011";
-    if(that.data.showupperhexagram==3)
-      switchtextshowupperhexagram="101";
-    if(that.data.showupperhexagram==4)
-      switchtextshowupperhexagram="001";
-    if(that.data.showupperhexagram==5)
-      switchtextshowupperhexagram="110";
-    if(that.data.showupperhexagram==6)
-      switchtextshowupperhexagram="010";
-    if(that.data.showupperhexagram==7)
-      switchtextshowupperhexagram="100";
-    if(that.data.showupperhexagram==8)
-      switchtextshowupperhexagram="000";
-    
-    var switchtextshowhexagram;
-    if(that.data.showhexagram==1)
-      switchtextshowhexagram="111";
-    if(that.data.showhexagram==2)
-      switchtextshowhexagram="011";
-    if(that.data.showhexagram==3)
-      switchtextshowhexagram="101";
-    if(that.data.showhexagram==4)
-      switchtextshowhexagram="001";
-    if(that.data.showhexagram==5)
-      switchtextshowhexagram="110";
-    if(that.data.showhexagram==6)
-      switchtextshowhexagram="010";
-    if(that.data.showhexagram==7)
-      switchtextshowhexagram="100";
-    if(that.data.showhexagram==8)
-      switchtextshowhexagram="000";
-    //组合成新的二进制数组
-    var mergehexagram=switchtextshowupperhexagram+switchtextshowhexagram;
 
-    //从data数据中拷贝出来六十四卦二进制数组
-    var copythesixtyfourhexagrams=that.data.thesixtyfourhexagrams;
+      //根据上爻，下爻数据，转换为二进制与六十四卦比对
+      var switchtextshowupperhexagram;
+      if(that.data.showupperhexagram==1)
+        switchtextshowupperhexagram="111";
+      if(that.data.showupperhexagram==2)
+        switchtextshowupperhexagram="011";
+      if(that.data.showupperhexagram==3)
+        switchtextshowupperhexagram="101";
+      if(that.data.showupperhexagram==4)
+        switchtextshowupperhexagram="001";
+      if(that.data.showupperhexagram==5)
+        switchtextshowupperhexagram="110";
+      if(that.data.showupperhexagram==6)
+        switchtextshowupperhexagram="010";
+      if(that.data.showupperhexagram==7)
+        switchtextshowupperhexagram="100";
+      if(that.data.showupperhexagram==8)
+        switchtextshowupperhexagram="000";
+      
+      var switchtextshowhexagram;
+      if(that.data.showhexagram==1)
+        switchtextshowhexagram="111";
+      if(that.data.showhexagram==2)
+        switchtextshowhexagram="011";
+      if(that.data.showhexagram==3)
+        switchtextshowhexagram="101";
+      if(that.data.showhexagram==4)
+        switchtextshowhexagram="001";
+      if(that.data.showhexagram==5)
+        switchtextshowhexagram="110";
+      if(that.data.showhexagram==6)
+        switchtextshowhexagram="010";
+      if(that.data.showhexagram==7)
+        switchtextshowhexagram="100";
+      if(that.data.showhexagram==8)
+        switchtextshowhexagram="000";
+      //组合成新的二进制数组
+      var mergehexagram=switchtextshowupperhexagram+switchtextshowhexagram;
 
-    // //this只是小区域，需要用that来指定大区域可用
-    // let that=this
+      //从data数据中拷贝出来六十四卦二进制数组
+      var copythesixtyfourhexagrams=that.data.thesixtyfourhexagrams;
 
-    //与拷贝的数组进行比较，得出数组序号（第几卦）和名称
-    for(var i=0;i<copythesixtyfourhexagrams.length;i++){
-      if(mergehexagram==copythesixtyfourhexagrams[i].id)
-      {
-        that.setData({
-          sixtyfourhexagramsid:copythesixtyfourhexagrams.indexOf(copythesixtyfourhexagrams[i]),
-          sixtyfourhexagramsname:copythesixtyfourhexagrams[i].name
-        })
-        console.log(copythesixtyfourhexagrams[i].name)
-        console.log(copythesixtyfourhexagrams[i].index)
-        //从数据库中查找到灵签数据
-        SpiritualDataDB.where({
-          _id:copythesixtyfourhexagrams[i].index,
-          _openid: "o_IPO5c6Urqy_pElay7ZL4N24Rtw"
-        })
-        .get({
-          success:function(res){
-            console.log("这是数据库数据",res.data)
-            that.setData({
-              //赋值给data中的变量
-              spiritualdata:res.data
-            })
-            console.log("这是赋值数据",that.data.spiritualdata)
-            //获取数据长度
-            var n=0;
-            for(var i in that.data.spiritualdata[0]){
-              n++
+      // //this只是小区域，需要用that来指定大区域可用
+      // let that=this
+
+      //与拷贝的数组进行比较，得出数组序号（第几卦）和名称
+      for(var i=0;i<copythesixtyfourhexagrams.length;i++){
+        if(mergehexagram==copythesixtyfourhexagrams[i].id)
+        {
+          that.setData({
+            sixtyfourhexagramsid:copythesixtyfourhexagrams.indexOf(copythesixtyfourhexagrams[i]),
+            sixtyfourhexagramsname:copythesixtyfourhexagrams[i].name
+          })
+          console.log(copythesixtyfourhexagrams[i].name)
+          console.log(copythesixtyfourhexagrams[i].index)
+          //从数据库中查找到灵签数据
+          SpiritualDataDB.where({
+            _id:copythesixtyfourhexagrams[i].index,
+            _openid: "o_IPO5c6Urqy_pElay7ZL4N24Rtw"
+          })
+          .get({
+            success:function(res){
+              console.log("这是数据库数据",res.data)
+              that.setData({
+                //赋值给data中的变量
+                spiritualdata:res.data
+              })
+              console.log("这是赋值数据",that.data.spiritualdata)
+              //获取数据长度
+              var n=0;
+              for(var i in that.data.spiritualdata[0]){
+                n++
+              }
+              that.setData({
+                //赋值数据长度
+                spiritualdatalength:n
+              })
+              console.log("这是数组长度",that.data.spiritualdatalength)
             }
-            that.setData({
-              //赋值数据长度
-              spiritualdatalength:n
-            })
-            console.log("这是数组长度",that.data.spiritualdatalength)
-          }
-        })
-      }
+          })
+        }
     }
+    });
   },
 
   /**
