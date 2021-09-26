@@ -126,12 +126,12 @@ Page({
           })
           .get({
             success:function(res){
-              console.log("这是数据库数据",res.data)
+              // console.log("这是数据库数据",res.data)
               that.setData({
                 //赋值给data中的变量
                 spiritualdata:res.data
               })
-              console.log("这是赋值数据",that.data.spiritualdata)
+              // console.log("这是赋值数据",that.data.spiritualdata)
               //获取数据长度
               var n=0;
               for(var i in that.data.spiritualdata[0]){
@@ -141,7 +141,7 @@ Page({
                 //赋值数据长度
                 spiritualdatalength:n
               })
-              console.log("这是数组长度",that.data.spiritualdatalength)
+              // console.log("这是数组长度",that.data.spiritualdatalength)
             }
           })
         }
@@ -152,105 +152,103 @@ Page({
   /**
    * 这是内容点击按钮处理
    */
-  show_content_01:function(){
-    var copyspiritualdata=this.data.spiritualdata;
-    var contentindex=1;
-    var templength=this.data.spiritualdatalength
-
-    wx.navigateTo({
-      url:'/pages/content/content',
-       // 打开的目标页面
-      success: (res) => {
-        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
-      },
-    })
-  },
   show_content_02:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=2;
-    var templength=this.data.spiritualdatalength
+    // var templength=this.data.spiritualdatalength
 
     wx.navigateTo({
       url:'/pages/content/content',
        // 打开的目标页面
       success: (res) => {
         // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
       },
     })
   },
   show_content_03:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=3;
-    var templength=this.data.spiritualdatalength
+    // var templength=this.data.spiritualdatalength
 
     wx.navigateTo({
       url:'/pages/content/content',
        // 打开的目标页面
       success: (res) => {
         // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
       },
     })
   },
   show_content_04:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=4;
-    var templength=this.data.spiritualdatalength
+    // var templength=this.data.spiritualdatalength
 
     wx.navigateTo({
       url:'/pages/content/content',
        // 打开的目标页面
       success: (res) => {
         // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
       },
     })
   },
   show_content_05:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=5;
-    var templength=this.data.spiritualdatalength
+    // var templength=this.data.spiritualdatalength
 
     wx.navigateTo({
       url:'/pages/content/content',
        // 打开的目标页面
       success: (res) => {
         // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
       },
     })
   },
   show_content_06:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=6;
-    var templength=this.data.spiritualdatalength
+    // var templength=this.data.spiritualdatalength
 
     wx.navigateTo({
       url:'/pages/content/content',
        // 打开的目标页面
       success: (res) => {
         // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
       },
     })
   },
   show_content_07:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=7;
-    var templength=this.data.spiritualdatalength
+    // var templength=this.data.spiritualdatalength
 
     wx.navigateTo({
       url:'/pages/content/content',
        // 打开的目标页面
       success: (res) => {
         // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex,templength} );
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
       },
     })
   },
-
+  /**
+   * 支付处理
+   */
+  payaction:function(){
+    wx.cloud.callFunction({
+      name:'customerpayment'
+    }).then(res=>{
+      console.log(res)
+      wx.resquestPayment({
+        
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

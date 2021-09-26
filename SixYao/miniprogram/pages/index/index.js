@@ -59,7 +59,6 @@ Page({
   },
   //设置时间函数
   settime:function(){
-
     var timestemp=Date.parse(new Date())
     var date=new Date(timestemp)
 
@@ -83,14 +82,13 @@ Page({
     this.getLunarDate();
     //计算时辰
     this.caltime(hour);
-
   },
   /**
    * 用时间计算六爻
    */
   formSubmit:function(){
 
-   let that=this;
+    let that=this;
 
     var calyear=that.data.ganzhi;
     var calmonth=that.data.lunarmonth;

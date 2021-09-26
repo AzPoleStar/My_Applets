@@ -10,8 +10,8 @@ Page({
         //按钮索引-确定是第几个按钮
         contentindexdata:"",
         //内容变量
-        content1data:"",
-        content1_desdata:"",
+        // content1data:"",
+        // content1_desdata:"",
         content2data:"",
         content2_desdata:"",
         content3data:"",
@@ -46,8 +46,8 @@ Page({
             this.setData({
                 newspiritualdata:data.copyspiritualdata,
                 contentindexdata:data.contentindex,
-                content1data:data.copyspiritualdata[0].content_01,
-                content1_desdata:data.copyspiritualdata[0].content_01_des,
+                // content1data:data.copyspiritualdata[0].content_01,
+                // content1_desdata:data.copyspiritualdata[0].content_01_des,
                 content2data:data.copyspiritualdata[0].content_02,
                 content2_desdata:data.copyspiritualdata[0].content_02_des,
                 content3data:data.copyspiritualdata[0].content_03,
@@ -63,8 +63,8 @@ Page({
             });
         });
         console.log("这是传到content里面的数据：",this.data.newspiritualdata,"这是第几个按钮：",this.data.contentindexdata)
-        console.log("数据测试",this.data.newspiritualdata[0].content_01)
-        console.log("test",this.data.content1data)
+        // console.log("数据测试",this.data.newspiritualdata[0].content_01)
+        // console.log("test",this.data.content1data)
     },
 
     /**
