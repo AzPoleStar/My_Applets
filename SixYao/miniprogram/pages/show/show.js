@@ -160,32 +160,33 @@ Page({
         // ...
       },
       success: res => {
+        console.log("支付成功",res)
         const payment = res.result.payment
         wx.requestPayment({
           ...payment,
           success (res) {
-            console.log('支付成功', res)
-
-            //跳转目标页面
-            var copyspiritualdata=this.data.spiritualdata;
-            var contentindex=2;
-
-            wx.navigateTo({
-              url:'/pages/content/content',
-              // 打开的目标页面
-              success: (res) => {
-                // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-                res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
-              },
-            })
+            console.log("支付成功", res)
           },
           fail (err) {
-            console.error('支付失败', err)
+            console.error("支付失败", err)
           }
         })
       },
       fail: console.error,
     })
+
+    // //跳转目标页面
+    // var copyspiritualdata=this.data.spiritualdata;
+    // var contentindex=2;
+
+    // wx.navigateTo({
+    //   url:'/pages/content/content',
+    //   // 打开的目标页面
+    //   success: (res) => {
+    //     // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+    //     res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
+    //   },
+    // })
   },
   show_content_03:function(){
     var copyspiritualdata=this.data.spiritualdata;
