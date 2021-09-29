@@ -1,8 +1,8 @@
 // pages/show/show.js
 //灵签数据库
 const SpiritualDataDB=wx.cloud.database().collection("SixYao_SpiritualData")
-//解卦数据库
-const HexagramDataDB=wx.cloud.database().collection("SixYao_HexagramData")
+//灵签付费数据库
+const SpiritualOrderDB=wx.cloud.database().collection("SixYao_SpiritualOrder")
 
 Page({
   /**
@@ -44,6 +44,14 @@ Page({
     spiritualdata:[],
     //灵签数据长度
     spiritualdatalength:"",
+
+    //商品费用
+    totalFee:1,
+    //商品名称
+    body:"六爻易卦咨询费",
+
+    //用户openid
+    openiddata:''
   },
 
   /**
@@ -147,59 +155,67 @@ Page({
         }
     }
     });
+
+    //获取用户openid
+    this.getOpenid();
   },
 
   /**
    * 这是内容点击按钮处理
    */
   show_content_02:function(){
-    //调用支付接口
-    wx.cloud.callFunction({
-      name: 'pay',
-      data: {
-        // ...
+
+    var copyspiritualdata=this.data.spiritualdata;
+    var contentindex=2;
+    //使用用户openid查询是否已经付费，付费则直接跳转，否则进行付费
+    SpiritualOrderDB.where({
+      appid:'wxb4dc176d15714310',
+      _openid: this.data.openiddata,
+      payStatus:'success'
+    }).get({
+      success(res){
+          //跳转目标页面
+          wx.navigateTo({
+            url:'/pages/content/content',
+            // 打开的目标页面
+            success: (res) => {
+              // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+              res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
+            },
+          })
+        console.log("查询付费用户成功",res.data)
       },
-      success: res => {
-        console.log("支付成功",res)
-        const payment = res.result.payment
-        wx.requestPayment({
-          ...payment,
-          success (res) {
-            console.log("支付成功", res)
-          },
-          fail (err) {
-            console.error("支付失败", err)
-          }
-        })
-      },
-      fail: console.error,
+      fail:err=>{
+        console.log("该用户没有付费")
+        this.wxpayfunction();
+      }
     })
-
-    // //跳转目标页面
-    // var copyspiritualdata=this.data.spiritualdata;
-    // var contentindex=2;
-
-    // wx.navigateTo({
-    //   url:'/pages/content/content',
-    //   // 打开的目标页面
-    //   success: (res) => {
-    //     // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-    //     res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
-    //   },
-    // })
   },
   show_content_03:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=3;
-    // var templength=this.data.spiritualdatalength
-
-    wx.navigateTo({
-      url:'/pages/content/content',
-       // 打开的目标页面
-      success: (res) => {
-        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
+    //使用用户openid查询是否已经付费，付费则直接跳转，否则进行付费
+    SpiritualOrderDB.where({
+      appid:'wxb4dc176d15714310',
+      _openid: this.data.openiddata,
+      payStatus:'success'
+    }).get({
+      success(res){
+          //跳转目标页面
+          wx.navigateTo({
+            url:'/pages/content/content',
+            // 打开的目标页面
+            success: (res) => {
+              // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+              res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
+            },
+          })
+        console.log("查询付费用户成功",res.data)
       },
+      fail:err=>{
+        console.log("该用户没有付费")
+        this.wxpayfunction();
+      }
     })
   },
   show_content_04:function(){
@@ -259,18 +275,90 @@ Page({
     })
   },
   /**
+   * 跳转函数封装
+   */
+  // jumppage:function(x,y){
+  //   //跳转目标页面
+  //   wx.navigateTo({
+  //     url:'/pages/content/content',
+  //     // 打开的目标页面
+  //     success: (res) => {
+  //       // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+  //       res.eventChannel.emit('newparentPageEmit',{x,y} );
+  //     },
+  //   })
+  // },
+
+  /**
    * 支付处理
    */
-  payaction:function(){
-    wx.cloud.callFunction({
-      name:'customerpayment'
-    }).then(res=>{
-      console.log(res)
-      wx.resquestPayment({
-        
+  /** 支付点击监听 */
+  async wxpayfunction() {
+    // const totalFee = 1
+    // const body = '六爻易卦咨询费'
+    wx.showLoading({
+      title: '打开微信支付',
+      mask: true
+    })
+ 
+    // 获取支付免鉴权参数
+    const payMentRes = await this.getPayMent(this.data.totalFee, this.data.body)
+    wx.hideLoading({
+      success: (res) => {},
+    })
+    // 小程序支付API
+    const payRes = await this.wxPay(payMentRes.result.payment)
+    // 支付API返回结果打印
+    console.log(payRes)
+  },
+ 
+  /**
+   * 小程序支付API
+   * @param {object} payment 支付免鉴权参数
+   */
+  wxPay(payment) {
+    return new Promise((resolve, rejects) => {
+      wx.requestPayment({
+        ...payment,
+        success(res) {
+          resolve({
+            status: 'success',
+            res: res
+          })
+        },
+        fail(err) {
+          resolve({
+            status: 'fail',
+            res: err
+          })
+        }
       })
     })
   },
+ 
+  /**
+   * 获取支付免鉴权参数
+   * @param {number} totalFee 支付金额, 单位：分
+   * @param {string} body 商品名称
+   */
+  getPayMent(totalFee, body) {
+    return new Promise((resolve, rejects) => {
+      wx.cloud.callFunction({
+        name: 'pay',
+        data: {
+          totalFee,
+          body
+        },
+        success(res) {
+          resolve(res)
+        },
+        fail(err) {
+          resolve(err)
+        }
+      })
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -317,5 +405,23 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+   /**
+   * 这是获取用户openid函数
+   */
+  getOpenid:function(){
+    let page = this;
+    wx.cloud.callFunction({
+      name:'openid',
+      complete:res=>{
+        console.log('openid--',res.result)
+        var openid = res.result.openid
+        page.setData({
+          openiddata:openid
+        })
+      }
+    })
   }
+
 })
