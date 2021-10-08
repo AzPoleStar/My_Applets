@@ -167,135 +167,46 @@ Page({
 
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=2;
-    //使用用户openid查询是否已经付费，付费则直接跳转，否则进行付费
-    SpiritualOrderDB.where({
-      appid:'wxb4dc176d15714310',
-      _openid: this.data.openiddata,
-      payStatus:'success'
-    }).get({
-      success(res){
-          //跳转目标页面
-          wx.navigateTo({
-            url:'/pages/content/content',
-            // 打开的目标页面
-            success: (res) => {
-              // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-              res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
-            },
-          })
-        console.log("查询付费用户成功",res.data)
-      },
-      fail:err=>{
-        console.log("该用户没有付费")
-        this.wxpayfunction();
-      }
-    })
+    //调用付费接口
+    this.wxpayfunction(copyspiritualdata,contentindex);
   },
   show_content_03:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=3;
-    //使用用户openid查询是否已经付费，付费则直接跳转，否则进行付费
-    SpiritualOrderDB.where({
-      appid:'wxb4dc176d15714310',
-      _openid: this.data.openiddata,
-      payStatus:'success'
-    }).get({
-      success(res){
-          //跳转目标页面
-          wx.navigateTo({
-            url:'/pages/content/content',
-            // 打开的目标页面
-            success: (res) => {
-              // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-              res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
-            },
-          })
-        console.log("查询付费用户成功",res.data)
-      },
-      fail:err=>{
-        console.log("该用户没有付费")
-        this.wxpayfunction();
-      }
-    })
-  },
+    //调用付费接口
+    this.wxpayfunction(copyspiritualdata,contentindex);
+    },
   show_content_04:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=4;
-    // var templength=this.data.spiritualdatalength
-
-    wx.navigateTo({
-      url:'/pages/content/content',
-       // 打开的目标页面
-      success: (res) => {
-        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
-      },
-    })
+    //调用付费接口
+    this.wxpayfunction(copyspiritualdata,contentindex);
   },
   show_content_05:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=5;
-    // var templength=this.data.spiritualdatalength
-
-    wx.navigateTo({
-      url:'/pages/content/content',
-       // 打开的目标页面
-      success: (res) => {
-        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
-      },
-    })
+    //调用付费接口
+    this.wxpayfunction(copyspiritualdata,contentindex);
   },
   show_content_06:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=6;
-    // var templength=this.data.spiritualdatalength
-
-    wx.navigateTo({
-      url:'/pages/content/content',
-       // 打开的目标页面
-      success: (res) => {
-        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
-      },
-    })
+    //调用付费接口
+    this.wxpayfunction(copyspiritualdata,contentindex);
   },
   show_content_07:function(){
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=7;
-    // var templength=this.data.spiritualdatalength
-
-    wx.navigateTo({
-      url:'/pages/content/content',
-       // 打开的目标页面
-      success: (res) => {
-        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
-      },
-    })
+    //调用付费接口
+    this.wxpayfunction(copyspiritualdata,contentindex);
   },
-  /**
-   * 跳转函数封装
-   */
-  // jumppage:function(x,y){
-  //   //跳转目标页面
-  //   wx.navigateTo({
-  //     url:'/pages/content/content',
-  //     // 打开的目标页面
-  //     success: (res) => {
-  //       // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
-  //       res.eventChannel.emit('newparentPageEmit',{x,y} );
-  //     },
-  //   })
-  // },
 
   /**
    * 支付处理
    */
   /** 支付点击监听 */
-  async wxpayfunction() {
-    // const totalFee = 1
-    // const body = '六爻易卦咨询费'
+  async wxpayfunction(copyspiritualdata,contentindex) {
+
     wx.showLoading({
       title: '打开微信支付',
       mask: true
@@ -310,6 +221,24 @@ Page({
     const payRes = await this.wxPay(payMentRes.result.payment)
     // 支付API返回结果打印
     console.log(payRes)
+
+    if(payRes.status=='success'){
+      //弹窗提示
+      wx.showToast({
+        title: '支付成功！', // 标题
+        icon: 'success',  // 图标类型，默认success
+        duration: 1500  // 提示窗停留时间，默认1500ms
+      })
+      //跳转目标页面
+      wx.navigateTo({
+        url:'/pages/content/content',
+        // 打开的目标页面
+        success: (res) => {
+          // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+          res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
+        },
+      })
+    }
   },
  
   /**
