@@ -28,6 +28,19 @@ Page({
         // background:""
     },
 
+    explain:function(){
+        var temphexagramnumber=this.data.newspiritualdata[0]._id;
+        var temphexagramname=this.data.newspiritualdata[0].name
+        // console.log(temphexagramnumber)
+        wx.navigateTo({
+            url:'/pages/explain/explain',
+             // 打开的目标页面
+            success: function(res){
+              // 通过eventChannel向被打开页面传送数据
+              res.eventChannel.emit('PageEmitToExplain',{temphexagramnumber,temphexagramname});
+            },
+          })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -59,7 +72,8 @@ Page({
                 content6data:data.copyspiritualdata[0].content_06,
                 content6_desdata:data.copyspiritualdata[0].content_06_des,
                 content7data:data.copyspiritualdata[0].content_07,
-                content7_desdata:data.copyspiritualdata[0].content_07_des
+                content7_desdata:data.copyspiritualdata[0].content_07_des,
+
             });
         });
         console.log("这是传到content里面的数据：",this.data.newspiritualdata,"这是第几个按钮：",this.data.contentindexdata)

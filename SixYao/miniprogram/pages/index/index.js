@@ -112,18 +112,20 @@ Page({
     })
 
     //像跳转页面传送参数
-    const tempupperhexagram = that.data.upperhexagram;
-    const temphexagram = that.data.hexagram;
-    const tempmovingline = that.data.movingline;
+    var tempupperhexagram = that.data.upperhexagram;
+    var temphexagram = that.data.hexagram;
     // 当前页面的数据
     wx.navigateTo({
       url:'/pages/show/show',
        // 打开的目标页面
       success: function(res){
         // 通过eventChannel向被打开页面传送数据
-        res.eventChannel.emit('parentPageEmit', {tempupperhexagram,temphexagram,tempmovingline});
+        res.eventChannel.emit('parentPageEmit', {tempupperhexagram,temphexagram});
       },
     })
+    //把动爻数据缓存起来
+    var tempmovingline = that.data.movingline;
+    wx.setStorageSync('movinglinedata', tempmovingline)
   },
   /**
    * 重新获取时间

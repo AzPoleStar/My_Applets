@@ -1,0 +1,101 @@
+<view class="padding-tb-xl">
+    <!-- 标题 -->
+    <view class="cu-bar bg-black text-lg text-bold">
+      <view>
+        <text class="padding-xs cuIcon-title text-orange "></text> 卦象详解
+      </view>
+    </view>
+    <!-- 卦名 -->
+    <view class="padding text-xl text-bold text-orange">{{newexagramname}}</view>
+
+    <view>
+        <view class="padding radius shadow bg-shadeTop">
+            <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+                卦象原文
+            </view>
+            <view class="padding-xs text-lg text-left">
+                {{explainhexagram.original_text}}
+            </view>
+        </view>
+        <view class="padding radius shadow bg-shadeTop">
+            <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+                原文解释
+            </view>
+            <view class="padding-xs text-lg text-left">
+                {{explainhexagram.explain_text}}
+            </view>
+        </view>
+    </view>
+    <!-- 标题 -->
+    <view class="cu-bar bg-black solid-bottom margin-top text-lg text-bold">
+      <view>
+        <text class="padding-xs cuIcon-title text-orange "></text> 变爻详解
+      </view>
+    </view>
+    <view class="padding radius shadow bg-shadeTop">
+      <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+          爻辞
+      </view>
+      <view class="padding-xs text-lg text-left">
+          {{explainmovingline.apocalypse}}
+      </view>
+    </view>
+    <view class="padding radius shadow bg-shadeTop">
+      <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+          解释
+      </view>
+      <view class="padding-xs text-lg text-left">
+          {{explainmovingline.explain_apocalypse}}
+      </view>
+    </view>
+    <view class="padding radius shadow bg-shadeTop">
+      <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+          运势
+      </view>
+      <view class="padding-xs text-lg text-left">
+          {{explainmovingline.content_01}}
+      </view>
+    </view>
+    <view class="padding radius shadow bg-shadeTop">
+      <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+          财运
+      </view>
+      <view class="padding-xs text-lg text-left">
+          {{explainmovingline.content_02}}
+      </view>
+    </view>
+    <view class="padding radius shadow bg-shadeTop">
+      <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+          婚恋
+      </view>
+      <view class="padding-xs text-lg text-left">
+          {{explainmovingline.content_03}}
+      </view>
+    </view>
+    <view class="padding radius shadow bg-shadeTop">
+      <view class="bg-black radius text-lg text-bold text-yellow text-center" style="width:75px;height:22px">
+          健康
+      </view>
+      <view class="padding-xs text-lg text-left">
+          {{explainmovingline.content_04}}
+      </view>
+    </view>
+    <!-- 标题 -->
+    <view class="cu-bar bg-black solid-bottom margin-top text-lg text-bold">
+      <view>
+        <text class="padding-xs cuIcon-title text-orange "></text> 变卦
+      </view>
+    </view>
+    <!-- 变卦卦名 -->
+    <view class="padding text-xl text-bold text-orange">{{explainmovingline.change_hexagram_name}}</view>
+    <!-- 变卦图 -->
+    <view class="picture padding-lg">
+      <image src='{{changeexagramindex}}' mode="aspectFit"></image>
+    </view>
+     <!-- 变卦解释 -->
+    <view class="padding radius shadow bg-shadeTop">
+      <view class="padding-xs text-lg text-left">
+            {{explainmovingline.change_hexagram_des}}
+      </view>
+    </view>
+</view>

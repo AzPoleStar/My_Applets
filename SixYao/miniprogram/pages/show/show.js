@@ -13,8 +13,6 @@ Page({
     showupperhexagram:"",
     //下卦数字
     showhexagram:"",
-    //动爻数字
-    showmovingline:"",
     //六十四卦数组
     thesixtyfourhexagrams:[
       {id:"111111",name:"乾为天",index:"Hexagram_01"},{id:"000000",name:"坤为地",index:"Hexagram_02"},{id:"010001",name:"水雷屯",index:"Hexagram_03"},{id:"100010",name:"山水蒙",index:"Hexagram_04"},
@@ -66,7 +64,6 @@ Page({
       that.setData({
         showupperhexagram:data.tempupperhexagram,
         showhexagram:data.temphexagram,
-        showmovingline:data.tempmovingline
       })
       console.log("上爻：",that.data.showupperhexagram)
       console.log("下爻：",that.data.showhexagram)
@@ -168,7 +165,17 @@ Page({
     var copyspiritualdata=this.data.spiritualdata;
     var contentindex=2;
     //调用付费接口
-    this.wxpayfunction(copyspiritualdata,contentindex);
+    // this.wxpayfunction(copyspiritualdata,contentindex);
+
+    //跳转目标页面
+    wx.navigateTo({
+      url:'/pages/content/content',
+      // 打开的目标页面
+      success: (res) => {
+        // 通过eventChannel向被打开页面传送数据，分别为灵签数据，按钮索引，数据长度
+        res.eventChannel.emit('newparentPageEmit',{copyspiritualdata,contentindex} );
+      },
+    })
   },
   show_content_03:function(){
     var copyspiritualdata=this.data.spiritualdata;
