@@ -1,11 +1,8 @@
 <!--pages/member/member.wxml-->
+<view class="view_top">
+	<image class="image_top_1" src="/resource/picture/topnavigation.jpg"></image>
+</view>
 <scroll-view class="scrollview" scroll-y="true">
-  <image class="role1" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_3.png" style="width: 750rpx; height: 450rpx;" >
-  </image>
-  <image class="role2" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_4.png" style="width: 750rpx; height: 450rpx;" >
-  </image>
-  <image class="role3" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_5.png" style="width: 750rpx; height: 450rpx;" >
-  </image>
-  <image class="role4" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_6.png" style="width: 750rpx; height: 450rpx;" >
+  <image src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/Resourse/member_info.jpg" mode="widthFix" style="width: 750rpx" >
   </image>
 </scroll-view>

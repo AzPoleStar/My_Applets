@@ -37,7 +37,7 @@
     "pages/plugin/verticalnav/verticalnav"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarBackgroundColor": "#39b54f",
     "navigationBarTitleText": "Color UI",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white"

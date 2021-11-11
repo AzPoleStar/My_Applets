@@ -6,16 +6,12 @@
     "pages/works/works"
   ],
   "window":{
-    "backgroundTextStyle":"dark",
-    "navigationBarBackgroundColor": "#333366",
-    "navigationBarTitleText": "极光拓影",
-    "navigationBarTextStyle":"white",
-    "backgroundColor":"#eeeeee",
+    "navigationStyle":"custom",
     "enablePullDownRefresh":true
   },
 "tabBar": {
   "color": "#eeeeee",
-  "selectedColor": "#33cc99",
+  "selectedColor": "#456495",
   "backgroundColor": "#333366",
   "list": [
     {

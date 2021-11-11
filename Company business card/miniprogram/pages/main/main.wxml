@@ -1,11 +1,8 @@
 <!--pages/main/main.wxml-->
+<view class="view_top">
+	<image class="image_top_1" src="/resource/picture/topnavigation.jpg"></image>
+</view>
 <scroll-view class="scrollview" scroll-y="true">
-          <image class="mainpage1" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_1.png"  style="width: 750rpx; height: 450rpx;">
-          </image>
-          <image class="mainpage2" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_2.png" style="width: 750rpx; height: 450rpx;" >
-          </image>
-          <image class="mainpage4" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_7.png" style="width: 750rpx; height: 450rpx;" >
-          </image>
-          <image class="mainpage5" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Picture/公司简介_页面_8.png" style="width: 750rpx; height: 450rpx;" >
-          </image>
-        </scroll-view>
+  <image src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/Resourse/company_info.jpg"  mode="widthFix" style="width: 750rpx">
+  </image>
+</scroll-view>

@@ -1,16 +1,7 @@
 <!--index.wxml-->
-<view bindtap="mytap" class="container">
-<text>\n</text>
-<text>\n</text>
-<text>\n</text>
+<view bindtap="mytap">
   <view class="logo">
-    <image class="logo" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Icon/logo_dark.png" mode="aspectFit" style="width: 660rpx; height: 600rpx">
+    <image class="logo" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/Resourse/Loading_BG.jpg" mode="widthFix" style="width: 750rpx">
     </image>
-  </view>
-  <view class="slogan">
-    <text>讲好故事，讲好故事</text>
-  </view>
-  <view class="tips">
-    <text>点击继续</text>
   </view>
 </view>
