@@ -1,5 +1,11 @@
 //app.js
 App({
+
+  // globalData: {
+  //   status: 0, // 状态栏高度
+  //   navHeight: 0 // 标题栏高度
+  // },
+
   onLaunch: function () {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
@@ -15,5 +21,20 @@ App({
     }
 
     this.globalData = {}
-  }
+
+      // // 通过系统信息计算导航栏高度        
+      // const sysinfo = wx.getSystemInfoSync(),
+      //   statusHeight = sysinfo.statusBarHeight,
+      //   isiOS = sysinfo.system.indexOf('iOS') > -1;
+      // let navHeight;
+      // if (!isiOS) { 
+      //     navHeight = 48;
+      //   } else {
+      //     navHeight = 44;
+      //   }
+      // this.globalData.status = statusHeight;
+      // this.globalData.navHeight = navHeight;
+      // // console.log(this.globalData.status);
+      // // console.log(this.globalData.navHeight);
+    }
 })

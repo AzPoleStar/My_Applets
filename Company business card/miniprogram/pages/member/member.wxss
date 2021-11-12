@@ -1,13 +1,18 @@
+.top {
+  position: fixed;
+  top: 0rpx;
+  z-index: 1;
+  width: 100%;
+}
 .view_top {
-    position: fixed;
-    top: 0rpx;
-    z-index: 1;
-    width: 100%;
-    height: 150rpx;
-    line-height: 150rpx;
-  }
-  .image_top_1 {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
+  position: relative;
+  width: 100%;
+}
+.image_top_1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.status-bar {
+  background: rgb(255, 255, 255);
+}

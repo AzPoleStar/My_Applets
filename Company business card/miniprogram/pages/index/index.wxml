@@ -1,4 +1,5 @@
-<!--index.wxml-->
+
+<view class="status-bar" style="height:{{status}}px"></view>
 <view bindtap="mytap">
   <view class="logo">
     <image class="logo" src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/Resourse/Loading_BG.jpg" mode="widthFix" style="width: 750rpx">

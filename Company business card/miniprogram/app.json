@@ -7,12 +7,13 @@
   ],
   "window":{
     "navigationStyle":"custom",
-    "enablePullDownRefresh":true
+    "enablePullDownRefresh":true,
+    "backgroundColor": "#ffffff"
   },
 "tabBar": {
   "color": "#eeeeee",
   "selectedColor": "#456495",
-  "backgroundColor": "#333366",
+  "backgroundColor": "#131E33",
   "list": [
     {
       "pagePath": "pages/main/main",
