@@ -1,12 +1,10 @@
-<view class="top">
+<view class="top_bar">
   <!-- 状态栏高度 -->
   <view class="status-bar" style="height:{{statusBarHeight}}px"></view>
   <!-- 固定的导航栏 -->
-  <view class="view_top" style="height:150rpx">
-    <image class="image_top_1" src="/resource/picture/topnavigation.jpg"></image>
-  </view>
+  <image class="image_top" style="height:150rpx;width:750rpx" src="/resource/picture/topnavigation.png"></image>
 </view>
-<scroll-view class="scrollview" scroll-y="true">
-  <image src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/Resourse/member_info.jpg" mode="widthFix" style="width: 750rpx" >
+<view class="content">
+  <image src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/Resourse/member_info.png" mode="widthFix" style="width: 750rpx" >
   </image>
-</scroll-view>
+</view>

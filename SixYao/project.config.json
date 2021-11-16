@@ -34,7 +34,8 @@
         "packNpmManually": false,
         "packNpmRelationList": [],
         "minifyWXSS": true,
-        "showES6CompileOption": false
+        "showES6CompileOption": false,
+        "minifyWXML": true
     },
     "appid": "wxb4dc176d15714310",
     "projectname": "LiuYaoYiGua",
