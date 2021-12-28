@@ -8,7 +8,8 @@
 <text>\n</text>
 <text>\n</text>
 <text>\n</text>
+<text>\n</text>
 <view class="content">
-  <video src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Video/demo2.1_2.mov" autoplay="true" style="width: 750rpx; height: 1320rpx;">
+  <video src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/FirstApplets/Video/demo2.1_2.mov" autoplay="true" style="width: 750rpx;height: 1300rpx">
   </video>
 </view>

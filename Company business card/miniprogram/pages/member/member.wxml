@@ -5,6 +5,6 @@
   <image class="image_top" style="height:150rpx;width:750rpx" src="/resource/picture/topnavigation.png"></image>
 </view>
 <view class="content">
-  <image src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/Resourse/member_info.png" mode="widthFix" style="width: 750rpx" >
+  <image src="cloud://myowncloud-2g3ie0qy1a547e9a.6d79-myowncloud-2g3ie0qy1a547e9a-1306869630/Resourse2.1.0/member_info.png" mode="widthFix" style="width: 750rpx" >
   </image>
 </view>

@@ -5,3 +5,6 @@
 .status-bar{
   background: rgb(255, 255, 255);
 }
+.content{
+  background-color: black;
+}
